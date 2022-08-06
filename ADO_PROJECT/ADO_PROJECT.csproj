@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36038142-40B7-4A36-AD1B-07A478459E53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ADO_PROJECT</RootNamespace>
+    <AssemblyName>ADO_PROJECT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnumList\Gender.cs" />
+    <Compile Include="EnumList\PackagePlanName.cs" />
+    <Compile Include="EnumList\PackageSpeed.cs" />
+    <Compile Include="frmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCustomer.Designer.cs">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPackagePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPackagePlan.Designer.cs">
+      <DependentUpon>frmAddPackagePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPaymentMethod.Designer.cs">
+      <DependentUpon>frmAddPaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddtblofficeAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddtblofficeAddress.Designer.cs">
+      <DependentUpon>frmAddtblofficeAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddtblServiceArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddtblServiceArea.Designer.cs">
+      <DependentUpon>frmAddtblServiceArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteCommandList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteCommandList.Designer.cs">
+      <DependentUpon>frmDeleteCommandList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteCustomer.Designer.cs">
+      <DependentUpon>frmDeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteEmployee.Designer.cs">
+      <DependentUpon>frmDeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeletePackagePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeletePackagePlan.Designer.cs">
+      <DependentUpon>frmDeletePackagePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeletePaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeletePaymentMethod.Designer.cs">
+      <DependentUpon>frmDeletePaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeletetblofficeAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeletetblofficeAddress.Designer.cs">
+      <DependentUpon>frmDeletetblofficeAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeletetblServiceArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeletetblServiceArea.Designer.cs">
+      <DependentUpon>frmDeletetblServiceArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsertCommandList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsertCommandList.Designer.cs">
+      <DependentUpon>frmInsertCommandList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogo.Designer.cs">
+      <DependentUpon>frmLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasswordRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasswordRecovery.Designer.cs">
+      <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.Designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaction.Designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCommandList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCommandList.Designer.cs">
+      <DependentUpon>frmUpdateCommandList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateEmployee.Designer.cs">
+      <DependentUpon>frmUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatePackagePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatePackagePlan.Designer.cs">
+      <DependentUpon>frmUpdatePackagePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatePaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatePaymentMethod.Designer.cs">
+      <DependentUpon>frmUpdatePaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatetblofficeAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatetblofficeAddress.Designer.cs">
+      <DependentUpon>frmUpdatetblofficeAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatetblServiceArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatetblServiceArea.Designer.cs">
+      <DependentUpon>frmUpdatetblServiceArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptEmployeeList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmployeeList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTotalEarn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTotalEarn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPackagePlan.resx">
+      <DependentUpon>frmAddPackagePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPaymentMethod.resx">
+      <DependentUpon>frmAddPaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddtblofficeAddress.resx">
+      <DependentUpon>frmAddtblofficeAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddtblServiceArea.resx">
+      <DependentUpon>frmAddtblServiceArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteCommandList.resx">
+      <DependentUpon>frmDeleteCommandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteCustomer.resx">
+      <DependentUpon>frmDeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteEmployee.resx">
+      <DependentUpon>frmDeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeletePackagePlan.resx">
+      <DependentUpon>frmDeletePackagePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeletePaymentMethod.resx">
+      <DependentUpon>frmDeletePaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeletetblofficeAddress.resx">
+      <DependentUpon>frmDeletetblofficeAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeletetblServiceArea.resx">
+      <DependentUpon>frmDeletetblServiceArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsertCommandList.resx">
+      <DependentUpon>frmInsertCommandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogo.resx">
+      <DependentUpon>frmLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasswordRecovery.resx">
+      <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistration.resx">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCommandList.resx">
+      <DependentUpon>frmUpdateCommandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateEmployee.resx">
+      <DependentUpon>frmUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatePackagePlan.resx">
+      <DependentUpon>frmUpdatePackagePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatePaymentMethod.resx">
+      <DependentUpon>frmUpdatePaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatetblofficeAddress.resx">
+      <DependentUpon>frmUpdatetblofficeAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatetblServiceArea.resx">
+      <DependentUpon>frmUpdatetblServiceArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptEmployeeList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmployeeList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTotalEarn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTotalEarn.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADOPROJECTDB%28DISCONNECTED DATABASE%29.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ADOPROJECTDB%28DISCONNECTED DATABASE%29_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ADOPROJECTDB%28DISCONNECTED DATABASE%29.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
